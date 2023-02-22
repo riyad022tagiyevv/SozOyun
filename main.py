@@ -38,7 +38,7 @@ def setup_logger():
 
 def help(update, context):
     update.message.reply_text('Əmrlər ⌨️\n\n' +
-                              '/basla - Yeni bir oyun başladar\n' +
+                              '/game - Yeni bir oyun başladar\n' +
                               '/help - Yardım\n', reply_to_message_id=True)
 
 
@@ -65,9 +65,9 @@ def button(update, context):
 def command_start(update, context: CallbackContext):
     if update.effective_chat.type == "private":
         
-        addme = InlineKeyboardButton(text="Məni qrupuna əlavə et 🤖", url="https://t.me/SozOyunRoBOT?startgroup=a")
-        sohbet = InlineKeyboardButton(text="👮‍♂️ Oyun qrupumuz", url="https://t.me/sozoyunbotchat")
-        admin = InlineKeyboardButton(text="🥷 Sahibim", url="https://t.me/TheZahid")
+        addme = InlineKeyboardButton(text="Məni qrupuna əlavə et 🤖", url="https://t.me/DTOCroBOT?startgroup=a")
+        sohbet = InlineKeyboardButton(text="👮‍♂️ Oyun qrupumuz", url="https://t.me/DTOTeammm")
+        admin = InlineKeyboardButton(text="🥷 Sahibim", url="https://t.me/Thagiyevv")
 
         keyboard = [[addme],[sohbet],[admin]]
         reply_markup = InlineKeyboardMarkup(keyboard)
@@ -77,7 +77,7 @@ def command_start(update, context: CallbackContext):
         user_id = update.message.from_user.id
         username = update.message.from_user.full_name
 
-        logger.info('Got command /basla,'
+        logger.info('Got command /game,'
                     'chat_id={},'
                     'user_id'.format(chat_id,
                                      user_id))
@@ -128,7 +128,7 @@ def command_master(update: Update, context):
                                  # reply_to_message_id=True)
         return
 
-    logger.info('Got command /master,'
+    logger.info('Got command /qreytinq,'
                 'chat_id={},'
                 'user="{}"({}),'
                 'timedelta={}'.format(chat_id,
